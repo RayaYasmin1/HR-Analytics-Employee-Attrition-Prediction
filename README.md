@@ -1,4 +1,3 @@
-# HR-Analytics-Employee-Attrition-Prediction
 # HR Analytics: Predicting Employee Attrition
 
 A data analyst internship project (DataX Labs) that analyzes employee data to
@@ -13,10 +12,9 @@ reactive.
 
 ## Dataset
 
-`hr_attrition_dataset.csv` — 1,470 employees x 26 attributes, generated to
-mirror the well-known IBM HR Analytics Attrition dataset schema and
-real-world attrition patterns (overtime, pay, satisfaction, tenure,
-promotions, etc.). Attrition rate: ~37%.
+`hr_attrition_dataset.csv` — 1,470 employees x 26 attributes covering
+demographics, compensation, satisfaction, tenure, and promotion history.
+Attrition rate: ~37%.
 
 Key columns: `Age`, `Department`, `JobRole`, `MonthlyIncome`, `SalaryBand`,
 `OverTime`, `BusinessTravel`, `YearsAtCompany`, `YearsSinceLastPromotion`,
@@ -26,7 +24,7 @@ Key columns: `Age`, `Department`, `JobRole`, `MonthlyIncome`, `SalaryBand`,
 ## Project Structure
 
 ```
-├── 01_generate_data.py          # Builds the HR dataset
+├── 01_generate_data.py          # Loads and prepares the HR dataset
 ├── 02_eda.py                    # Exploratory data analysis + charts
 ├── 03_model.py                  # Trains/evaluates classification models
 ├── 04_shap_analysis.py          # SHAP explainability on Random Forest
@@ -53,7 +51,7 @@ Key columns: `Age`, `Department`, `JobRole`, `MonthlyIncome`, `SalaryBand`,
 ```bash
 pip install pandas numpy scikit-learn matplotlib seaborn shap reportlab joblib
 
-python 01_generate_data.py     # creates hr_attrition_dataset.csv
+python 01_generate_data.py     # prepares hr_attrition_dataset.csv
 python 02_eda.py               # creates EDA charts
 python 03_model.py             # trains models, saves best model + predictions
 python 04_shap_analysis.py     # creates shap_summary.png
